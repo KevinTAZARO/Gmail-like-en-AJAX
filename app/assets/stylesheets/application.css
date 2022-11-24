@@ -1,0 +1,44 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body {
+    background: linear-gradient(90deg, gray, rgb(51, 0, 255));
+}
+
+.email-index {
+    color: beige;
+}
+ .column {
+    color: beige;
+    border: solid 3px black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    flex: 45%;
+
+}
+
+.row {
+    margin: 10px;
+    display: flex;
+    
+}
+
+.btn-add-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

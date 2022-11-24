@@ -1,0 +1,38 @@
+<p style="color: green"><%= notice %></p>
+
+<main class="email-index">
+
+<h1>GmailLike</h1>
+<p>Your new application to receive your mail faster</p>
+    <div>
+        <div class="btn-add-center">
+            <%= button_to "Add an Email", emails_path, :method => "post"%>
+        </div>
+
+        <div class="row">
+            <div class="column">
+
+                <h2> Email List </h2>
+
+                <hr>
+
+                <% @emails.each do |email| %>
+                    <h4>Email n° <%= email.id%> : </h4>
+                    <strong>Object</strong> : <%= "email.object" %> <br/>
+                    <%= email.body %> <br/><br/>
+                    <%= button_to "Show the email", email_path(email), :method => "get" %>
+                    <%= button_to "Remove", email_path(email), :method => "delete"%>
+                    <%= button_to "Unread"%>
+                    <hr>
+                    <% end %>
+            </div>
+
+            <div class="column">
+                <h2> Email Selected </h2>
+                <hr>
+            </div>
+        </div>
+
+        
+    </div>
+</main>
